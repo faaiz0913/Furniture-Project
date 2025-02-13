@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FurniCraft - Favorites</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const favoritesContainer = document.getElementById('favorites-container');
+            let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
+            function renderFavorites() {
+                favoritesContainer.innerHTML = '';
+                favorites.forEach((item, index) => {
+                    const itemElement = document.createElement('div');
+                    itemElement.classList.add('bg-white', 'rounded-lg', 'shadow-md', 'overflow-hidden', 'relative', 'mb-6');
+                    itemElement.innerHTML = `
+                        <img alt="${item.description}" class="w-full h-48 object-cover" src="${item.image}" />
+                        <div class="p-4">
+                            <h2 class="text-xl font-bold">${item.title}</h2>
+                            <p class="text-gray-600">${item.description}</p>
+                        </div>
+                        <button class="absolute top-2 right-2 text-red-500 hover:text-red-700 favorite-btn" data-index="${index}">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    `;
+                    favoritesContainer.appendChild(itemElement);
+                });
+
+                const favoriteButtons = document.querySelectorAll('.favorite-btn');
+                favoriteButtons.forEach(button => {
+                    button.addEventListener('click', function () {
+                        const index = this.dataset.index;
+                        favorites.splice(index, 1);
+                        localStorage.setItem('favorites', JSON.stringify(favorites));
+                        renderFavorites();
+                    });
+                });
+            }
+
+            renderFavorites();
+        });
+    </script>
+</head>
+<body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-white bg-opacity-20 backdrop-blur-md shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+            <a href="home.html" class="text-xl font-bold">FurniCraft</a>
+            <div class="space-x-4">
+                <a class="text-gray-700 hover:text-black" href="home.html">Home</a>
+                <a class="text-gray-700 hover:text-black" href="#">Shop</a>
+                <a class="text-gray-700 hover:text-black" href="#">Categories</a>
+                <a class="text-gray-700 hover:text-black" href="#">About</a>
+                <a class="text-gray-700 hover:text-black" href="#">Contact</a>
+                <a class="text-gray-700 hover:text-black" href="favorites.html">Favorites</a>
+            </div>
+            <div class="space-x-4">
+                <a class="text-gray-700 hover:text-black" href="#"><i class="fas fa-heart"></i></a>
+                <a class="text-gray-700 hover:text-black" href="#"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </nav>
+    <!-- Favorites Section -->
+    <div class="container mx-auto p-6">
+        <h1 class="text-3xl font-bold mb-6">Your Favorites</h1>
+        <div id="favorites-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Favorite items will be appended here by JavaScript -->
+        </div>
+    </div>
+</body>
+</html>

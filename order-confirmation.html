@@ -1,0 +1,106 @@
+<html>
+<head>
+    <title>FurniCraft - Order Confirmation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-white-90">
+    <!-- Navbar -->
+    <nav class="bg-white bg-opacity-20 backdrop-blur-md shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+            <a href="home.html" class="text-xl font-bold">FurniCraft</a>
+            <div class="space-x-4">
+                <a class="text-gray-700 hover:text-black" href="home.html">Home</a>
+                <a class="text-gray-700 hover:text-black" href="livingroom.html">Shop</a>
+                <a class="text-gray-700 hover:text-black" href="#">Categories</a>
+                <a class="text-gray-700 hover:text-black" href="#">About</a>
+                <a class="text-gray-700 hover:text-black" href="#">Contact</a>
+            </div>
+            <div class="space-x-4">
+                <a class="text-gray-700 hover:text-black" href="favorites.html"><i class="fas fa-heart"></i></a>
+                <a class="text-gray-700 hover:text-black" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </nav>
+    <!-- Order Confirmation Section -->
+    <div class="container mx-auto p-6">
+        <h1 class="text-3xl font-bold mb-6">Order Confirmation</h1>
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-2xl font-bold mb-4">Thank you for your purchase!</h2>
+            <p class="mb-4">Your order has been placed successfully. Below are your order details:</p>
+            <div class="mb-4">
+                <h3 class="text-xl font-bold">Order Number: <span class="font-normal">#123456</span></h3>
+            </div>
+            <div class="mb-4">
+                <h3 class="text-xl font-bold">Shipping Information</h3>
+                <p class="text-gray-700">Full Name: John Doe</p>
+                <p class="text-gray-700">Address: 123 Furniture Street, New York, NY 10001</p>
+                <p class="text-gray-700">Phone Number: (555) 123-4567</p>
+            </div>
+            <div class="mb-4">
+                <h3 class="text-xl font-bold">Order Summary</h3>
+                <ul class="text-gray-700">
+                    <li>Item 1: Modern Sofa - $500</li>
+                    <li>Item 2: Wooden Coffee Table - $150</li>
+                    <li>Item 3: Floor Lamp - $80</li>
+                </ul>
+                <p class="text-gray-700 font-bold mt-2">Total: $730</p>
+            </div>
+            <a href="home.html" class="bg-black text-white py-2 px-4 rounded-lg">Continue Shopping</a>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-bold">Stay Updated</h2>
+                <p class="mt-2 text-lg">Subscribe to our newsletter for exclusive offers, new arrivals, and interior design tips.</p>
+                <div class="mt-6 flex justify-center">
+                    <input class="px-4 py-2 text-black rounded-l-md border-none focus:ring-2 focus:ring-gray-500" placeholder="Enter your email" type="email"/>
+                    <button class="px-4 py-2 bg-white text-gray-900 rounded-r-md">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="bg-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-xl font-bold">FurniCraft</h3>
+                <p class="mt-2 text-gray-600">Creating beautiful spaces with premium furniture since 1995.</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold">Quick Links</h3>
+                <ul class="mt-2 space-y-2">
+                    <li><a class="text-gray-600 hover:text-gray-900" href="#">About Us</a></li>
+                    <li><a class="text-gray-600 hover:text-gray-900" href="#">Contact</a></li>
+                    <li><a class="text-gray-600 hover:text-gray-900" href="#">FAQs</a></li>
+                    <li><a class="text-gray-600 hover:text-gray-900" href="#">Shipping</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold">Categories</h3>
+                <ul class="mt-2 space-y-2">
+                    <li><a class="text-gray-600 hover:text-gray-900" href="#">Living Room</a></li>
+                    <li><a class="text-gray-600 hover:text-gray-900" href="#">Bedroom</a></li>
+                    <li><a class="text-gray-600 hover:text-gray-900" href="#">Dining Room</a></li>
+                    <li><a class="text-gray-600 hover:text-gray-900" href="#">Office</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold">Contact</h3>
+                <ul class="mt-2 space-y-2 text-gray-600">
+                    <li>123 Furniture Street</li>
+                    <li>New York, NY 10001</li>
+                    <li>Phone: (555) 123-4567</li>
+                    <li>Email: info@furnicraft.com</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

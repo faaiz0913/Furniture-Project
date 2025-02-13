@@ -1,0 +1,321 @@
+
+<html>
+<head>
+    <title>FurniCraft</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-white-90">
+    <!-- Navbar -->
+    <nav class="bg-white bg-opacity-20 backdrop-blur-md shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+            <a href="home.html" class="text-xl font-bold">FurniCraft</a>
+            <div class="hidden md:flex space-x-4">
+                <a class="text-gray-700 hover:text-black" href="home.html">Home</a>
+                <a class="text-gray-700 hover:text-black" href="livingroom.html">Shop</a>
+                <a class="text-gray-700 hover:text-black" href="#">Categories</a>
+                <a class="text-gray-700 hover:text-black" href="#">About</a>
+                <a class="text-gray-700 hover:text-black" href="#">Contact</a>
+            </div>
+            <div class="hidden md:flex space-x-4">
+                <a class="text-gray-700 hover:text-black" href="favorites.html"><i class="fas fa-heart"></i></a>
+                <a class="text-gray-700 hover:text-black" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+            <div class="md:hidden">
+                <button id="menuButton" class="text-gray-700 hover:text-black focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden">
+            <a class="block text-gray-700 hover:text-black px-4 py-2" href="home.html">Home</a>
+            <a class="block text-gray-700 hover:text-black px-4 py-2" href="livingroom.html">Shop</a>
+            <a class="block text-gray-700 hover:text-black px-4 py-2" href="#">Categories</a>
+            <a class="block text-gray-700 hover:text-black px-4 py-2" href="#">About</a>
+            <a class="block text-gray-700 hover:text-black px-4 py-2" href="#">Contact</a>
+            <a class="block text-gray-700 hover:text-black px-4 py-2" href="favorites.html"><i class="fas fa-heart"></i> Favorites</a>
+            <a class="block text-gray-700 hover:text-black px-4 py-2" href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center">
+        <img alt="Elegant furniture background" class="absolute inset-0 w-full h-full object-cover z-0" height="1080" src="https://storage.googleapis.com/a1aa/image/XjoJbM_kkbmwbD5Au4Nw9oxD3zTD1PbZJ5RCsncxxXo.jpg" width="1920"/>
+        <div class="relative z-10 text-center">
+            <h1 class="text-5xl font-bold text-white mb-4">Transform Your Space with Elegant Furniture</h1>
+            <p class="text-lg text-gray-200 mb-6">Discover our curated collection of premium furniture pieces that blend style, comfort, and functionality.</p>
+            <button id="shopNowBtn" class="bg-black text-white px-6 py-3 rounded-full flex items-center space-x-2">
+                <span>Shop Now</span>
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+        <div class="absolute inset-0 bg-black opacity-50 z-0"></div>
+    </section>
+    <!-- Shop by Category Section -->
+    <div id="shopByCategory" class="container mx-auto p-6">
+        <h1 class="text-3xl font-bold mb-6">Shop by Category</h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:-translate-y-2 hover:shadow-lg">
+                <a href="livingroom.html">
+                    <div class="bg-gray-200 h-48 flex items-center justify-center">
+                        <img alt="Living Room" class="h-full w-full object-cover" src="https://storage.googleapis.com/a1aa/image/5VwmTuDEwfxjWuG1yrKSJrTHm7_chA2w7rKat1XNmbU.jpg">
+                        </img>
+                    </div>
+                    <div class="p-4">
+                        <h2 class="text-xl font-bold">Living Room</h2>
+                        <p class="text-gray-600">120 items</p>
+                    </div>
+                </a>
+            </div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:-translate-y-2 hover:shadow-lg">
+                <a href="bedroom.html">
+                    <div class="bg-gray-200 h-48 flex items-center justify-center">
+                        <img alt="Bedroom" class="h-full w-full object-cover" src="https://storage.googleapis.com/a1aa/image/g6Cvh0-CWwZo5rhuuGfzjvptcUpfS1YxEkukvG6gBPk.jpg"/>
+                    </div>
+                    <div class="p-4">
+                        <h2 class="text-xl font-bold">Bedroom</h2>
+                        <p class="text-gray-600">90 items</p>
+                    </div>
+                </a>
+            </div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:-translate-y-2 hover:shadow-lg">
+                <div class="bg-gray-200 h-48 flex items-center justify-center">
+                    <img alt="Dining Room" class="h-full w-full object-cover" src="https://storage.googleapis.com/a1aa/image/0PFJVEa_1w6ZfNqDx6A-dpriNlnoXEFe_h75HGi4AZg.jpg"/>
+                </div>
+                <div class="p-4">
+                    <h2 class="text-xl font-bold">Dining Room</h2>
+                    <p class="text-gray-600">75 items</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Featured Products Section -->
+    <div class="container mx-auto p-6">
+        <h1 class="text-3xl font-bold mb-6">Featured Products</h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Product Card 1 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img alt="Image of Modern Leather Sofa" class="w-full h-48 object-cover" height="400" src="https://storage.googleapis.com/a1aa/image/Y05yddxSuIOCyuGzbV7LUb2WL9GHKALTxjgEeIU9CwE.jpg" width="600"/>
+                <div class="p-4">
+                    <span class="inline-block bg-gray-200 text-gray-800 text-xs px-2 py-1 rounded-full mb-2">Living Room</span>
+                    <h2 class="text-lg font-bold mb-2">Modern Leather Sofa</h2>
+                    <div class="flex items-center mb-2">
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                    </div>
+                    <p class="text-xl font-bold mb-4">25000/-</p>
+                    <button class="w-full bg-black text-white py-2 rounded-lg add-to-cart" data-id="1" data-name="Modern Leather Sofa" data-price="25000" data-image="https://storage.googleapis.com/a1aa/image/Y05yddxSuIOCyuGzbV7LUb2WL9GHKALTxjgEeIU9CwE.jpg">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Product Card 2 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img alt="Image of Wooden Dining Table" class="w-full h-48 object-cover" height="400" src="https://storage.googleapis.com/a1aa/image/QX8G3p6z0c6Cbz7mZk5Z6J_LbecgOsPk4CCgWei9Z1g.jpg" width="600"/>
+                <div class="p-4">
+                    <span class="inline-block bg-gray-200 text-gray-800 text-xs px-2 py-1 rounded-full mb-2">Dining Room</span>
+                    <h2 class="text-lg font-bold mb-2">Wooden Dining Table</h2>
+                    <div class="flex items-center mb-2">
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-gray-300"></i>
+                    </div>
+                    <p class="text-xl font-bold mb-4">9000/-</p>
+                    <button class="w-full bg-black text-white py-2 rounded-lg add-to-cart" data-id="2" data-name="Wooden Dining Table" data-price="9000" data-image="https://storage.googleapis.com/a1aa/image/QX8G3p6z0c6Cbz7mZk5Z6J_LbecgOsPk4CCgWei9Z1g.jpg">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Product Card 3 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img alt="Image of Queen Size Bed Frame" class="w-full h-48 object-cover" height="400" src="https://storage.googleapis.com/a1aa/image/1kwqiK5mrd3IszXLQwHCU8whAmFAQcywktIwBE0d8KA.jpg" width="600"/>
+                <div class="p-4">
+                    <span class="inline-block bg-gray-200 text-gray-800 text-xs px-2 py-1 rounded-full mb-2">Bedroom</span>
+                    <h2 class="text-lg font-bold mb-2">Queen Size Bed Frame</h2>
+                    <div class="flex items-center mb-2">
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                    </div>
+                    <p class="text-xl font-bold mb-4">17500/-</p>
+                    <button class="w-full bg-black text-white py-2 rounded-lg add-to-cart" data-id="3" data-name="Queen Size Bed Frame" data-price="17500" data-image="https://storage.googleapis.com/a1aa/image/1kwqiK5mrd3IszXLQwHCU8whAmFAQcywktIwBE0d8KA.jpg">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Product Card 4 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img alt="Image of Ergonomic Office Chair" class="w-full h-48 object-cover" height="400" src="https://storage.googleapis.com/a1aa/image/8yFdivJwEoBgjHq6njcbrYxj9vB-Z8pGj5I2ZQokaKw.jpg" width="600"/>
+                <div class="p-4">
+                    <span class="inline-block bg-gray-200 text-gray-800 text-xs px-2 py-1 rounded-full mb-2">Office</span>
+                    <h2 class="text-lg font-bold mb-2">Ergonomic Office Chair</h2>
+                    <div class="flex items-center mb-2">
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-gray-300"></i>
+                    </div>
+                    <p class="text-xl font-bold mb-4">1500/-</p>
+                    <button class="w-full bg-black text-white py-2 rounded-lg add-to-cart" data-id="4" data-name="Ergonomic Office Chair" data-price="1500" data-image="https://storage.googleapis.com/a1aa/image/8yFdivJwEoBgjHq6njcbrYxj9vB-Z8pGj5I2ZQokaKw.jpg">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonials Section -->
+    <section class="container mx-auto px-4 py-16">
+        <h2 class="text-3xl font-bold text-center mb-8">What Our Customers Say</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Testimonial 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="flex items-center mb-4">
+                    <div class="text-yellow-500">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <p class="text-gray-700 mb-4">The quality of the furniture exceeded my expectations. The customer service was exceptional throughout the entire process.</p>
+                <div class="flex items-center">
+                    <img alt="Profile picture of Tasmey Trivedi" class="w-10 h-10 rounded-full mr-4" height="40" src="https://storage.googleapis.com/a1aa/image/mepCJbbxJEedAnjaYQnW60WEF_HeWpiV7oJhHThv_IY.jpg" width="40"/>
+                    <div>
+                        <p class="font-bold">Tasmey Trivedi</p>
+                        <p class="text-gray-600">vadodara</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="flex items-center mb-4">
+                    <div class="text-yellow-500">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <p class="text-gray-700 mb-4">Beautiful pieces that have transformed my living space. The attention to detail and craftsmanship is outstanding.</p>
+                <div class="flex items-center">
+                    <img alt="Profile picture of Michael Chen" class="w-10 h-10 rounded-full mr-4" height="40" src="https://storage.googleapis.com/a1aa/image/GzKnFArSZIyVbEjMcDkkH6sKde5upXueJ3OmBRVNmJ4.jpg" width="40"/>
+                    <div>
+                        <p class="font-bold">Michael Chen</p>
+                        <p class="text-gray-600">San Francisco, CA</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="flex items-center mb-4">
+                    <div class="text-yellow-500">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <p class="text-gray-700 mb-4">I'm extremely satisfied with my purchase. The delivery was prompt and the assembly service was professional.</p>
+                <div class="flex items-center">
+                    <img alt="Profile picture of Emily Williams" class="w-10 h-10 rounded-full mr-4" height="40" src="https://storage.googleapis.com/a1aa/image/cwRRuU-pyro3qdrBN5wX-zfviRv_qR1Z61PxoQarvXU.jpg" width="40"/>
+                    <div>
+                        <p class="font-bold">Emily Williams</p>
+                        <p class="text-gray-600">Chicago, IL</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-bold">Stay Updated</h2>
+                <p class="mt-2 text-lg">Subscribe to our newsletter for exclusive offers, new arrivals, and interior design tips.</p>
+                <div class="mt-6 flex justify-center">
+                    <input class="px-4 py-2 text-black rounded-l-md border-none focus:ring-2 focus:ring-gray-500" placeholder="Enter your email" type"email"/>
+                    <button class="px-4 py-2 bg-white text-gray-900 rounded-r-md">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="bg-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-xl font-bold">FurniCraft</h3>
+                <p class="mt-2 text-gray-600">Creating beautiful spaces with premium furniture since 1995.</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold">Quick Links</h3>
+                <ul class="mt-2 space-y-2">
+                    <li><a class="text-gray-600 hover:text-gray-900" href="#">About Us</a></li>
+                    <li><a class="text-gray-600 hover:text-gray-900" href="#">Contact</a></li>
+                    <li><a class="text-gray-600 hover:text-gray-900" href="#">FAQs</a></li>
+                    <li><a class="text-gray-600 hover:text-gray-900" href="#">Shipping</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold">Categories</h3>
+                <ul class="mt-2 space-y-2">
+                    <li><a class="text-gray-600 hover:text-gray-900" href="#">Living Room</a></li>
+                    <li><a class="text-gray-600 hover:text-gray-900" href="#">Bedroom</a></li>
+                    <li><a class="text-gray-600 hover:text-gray-900" href="#">Dining Room</a></li>
+                    <li><a class="text-gray-600 hover:text-gray-900" href="#">Office</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold">Contact</h3>
+                <ul class="mt-2 space-y-2 text-gray-600">
+                    <li>123 Furniture Street</li>
+                    <li>New York, NY 10001</li>
+                    <li>Phone: (555) 123-4567</li>
+                    <li>Email: info@furnicraft.com</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+
+      
+    document.addEventListener("DOMContentLoaded", function () {
+        const cartButtons = document.querySelectorAll(".add-to-cart");
+
+        cartButtons.forEach(button => {
+            button.addEventListener("click", function () {
+                const product = {
+                    id: this.dataset.id,
+                    name: this.dataset.name,
+                    price: this.dataset.price,
+                    image: this.dataset.image,
+                    quantity: 1
+                };
+
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+                // Check if product already exists in cart, update quantity if found
+                let existingProduct = cart.find(item => item.id === product.id);
+                if (existingProduct) {
+                    existingProduct.quantity += 1;
+                } else {
+                    cart.push(product);
+                }
+
+                localStorage.setItem("cart", JSON.stringify(cart));
+
+                // Redirect to the cart page
+                window.location.href = "cart.html";
+            });
+        });
+    });
+
+
+    </script>
+</body>
+</html>

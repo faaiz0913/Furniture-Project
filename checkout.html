@@ -1,0 +1,165 @@
+<html>
+<head>
+    <title>FurniCraft - Checkout</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-white-90">
+    <!-- Navbar -->
+    <nav class="bg-white bg-opacity-20 backdrop-blur-md shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+            <a href="home.html" class="text-xl font-bold">FurniCraft</a>
+            <div class="space-x-4">
+                <a class="text-gray-700 hover:text-black" href="home.html">Home</a>
+                <a class="text-gray-700 hover:text-black" href="livingroom.html">Shop</a>
+                <a class="text-gray-700 hover:text-black" href="#">Categories</a>
+                <a class="text-gray-700 hover:text-black" href="#">About</a>
+                <a class="text-gray-700 hover:text-black" href="#">Contact</a>
+            </div>
+            <div class="space-x-4">
+                <a class="text-gray-700 hover:text-black" href="favorites.html"><i class="fas fa-heart"></i></a>
+                <a class="text-gray-700 hover:text-black" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </nav>
+    <!-- Checkout Section -->
+    <div class="container mx-auto p-6">
+        <h1 class="text-3xl font-bold mb-6">Checkout</h1>
+        <form id="checkoutForm" class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <!-- Shipping Information -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold mb-4">Shipping Information</h2>
+                <div class="mb-4">
+                    <label class="block text-gray-700">Full Name</label>
+                    <input class="w-full px-4 py-2 border rounded-lg" type="text" id="fullName" required/>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700">Address</label>
+                    <input class="w-full px-4 py-2 border rounded-lg" type="text" id="address" required/>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700">City</label>
+                    <input class="w-full px-4 py-2 border rounded-lg" type="text" id="city" required/>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700">State</label>
+                    <input class="w-full px-4 py-2 border rounded-lg" type="text" id="state" required/>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700">Zip Code</label>
+                    <input class="w-full px-4 py-2 border rounded-lg" type="text" id="zipCode" required/>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700">Phone Number</label>
+                    <input class="w-full px-4 py-2 border rounded-lg" type="text" id="phoneNumber" required/>
+                </div>
+            </div>
+            <!-- Payment Information -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold mb-4">Payment Information</h2>
+                <div class="mb-4">
+                    <label class="block text-gray-700">Card Number</label>
+                    <input class="w-full px-4 py-2 border rounded-lg" type="text" id="cardNumber" required/>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700">Expiration Date</label>
+                    <input class="w-full px-4 py-2 border rounded-lg" type="text" id="expirationDate" required/>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700">CVV</label>
+                    <input class="w-full px-4 py-2 border rounded-lg" type="text" id="cvv" required/>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700">Name on Card</label>
+                    <input class="w-full px-4 py-2 border rounded-lg" type="text" id="nameOnCard" required/>
+                </div>
+                <button class="w-full bg-black text-white py-2 rounded-lg" type="submit">Place Order</button>
+            </div>
+        </form>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-bold">Stay Updated</h2>
+                <p class="mt-2 text-lg">Subscribe to our newsletter for exclusive offers, new arrivals, and interior design tips.</p>
+                <div class="mt-6 flex justify-center">
+                    <input class="px-4 py-2 text-black rounded-l-md border-none focus:ring-2 focus:ring-gray-500" placeholder="Enter your email" type="email"/>
+                    <button class="px-4 py-2 bg-white text-gray-900 rounded-r-md">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="bg-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-xl font-bold">FurniCraft</h3>
+                <p class="mt-2 text-gray-600">Creating beautiful spaces with premium furniture since 1995.</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold">Quick Links</h3>
+                <ul class="mt-2 space-y-2">
+                    <li><a class="text-gray-600 hover:text-gray-900" href="#">About Us</a></li>
+                    <li><a class="text-gray-600 hover:text-gray-900" href="#">Contact</a></li>
+                    <li><a class="text-gray-600 hover:text-gray-900" href="#">FAQs</a></li>
+                    <li><a class="text-gray-600 hover:text-gray-900" href="#">Shipping</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold">Categories</h3>
+                <ul class="mt-2 space-y-2">
+                    <li><a class="text-gray-600 hover:text-gray-900" href="#">Living Room</a></li>
+                    <li><a class="text-gray-600 hover:text-gray-900" href="#">Bedroom</a></li>
+                    <li><a class="text-gray-600 hover:text-gray-900" href="#">Dining Room</a></li>
+                    <li><a class="text-gray-600 hover:text-gray-900" href="#">Office</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold">Contact</h3>
+                <ul class="mt-2 space-y-2 text-gray-600">
+                    <li>123 Furniture Street</li>
+                    <li>New York, NY 10001</li>
+                    <li>Phone: (555) 123-4567</li>
+                    <li>Email: info@furnicraft.com</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('checkoutForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Collect form data
+            const fullName = document.getElementById('fullName').value;
+            const address = document.getElementById('address').value;
+            const city = document.getElementById('city').value;
+            const state = document.getElementById('state').value;
+            const zipCode = document.getElementById('zipCode').value;
+            const phoneNumber = document.getElementById('phoneNumber').value;
+            const cardNumber = document.getElementById('cardNumber').value;
+            const expirationDate = document.getElementById('expirationDate').value;
+            const cvv = document.getElementById('cvv').value;
+            const nameOnCard = document.getElementById('nameOnCard').value;
+
+            // Validate form data (basic validation)
+            if (!fullName || !address || !city || !state || !zipCode || !phoneNumber || !cardNumber || !expirationDate || !cvv || !nameOnCard) {
+                alert('Please fill out all fields.');
+                return;
+            }
+
+            // Process payment (this is a placeholder, you need to integrate with a real payment gateway)
+            alert('Payment processed successfully!');
+
+            // Clear cart
+            localStorage.removeItem('cart');
+
+            // Redirect to order confirmation page
+            window.location.href = 'order-confirmation.html';
+        });
+    </script>
+</body>
+</html>
